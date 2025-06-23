@@ -1,0 +1,76 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/vite.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <title>Interactive Avatar Demo</title>
+  </head>
+
+  <body>
+    <main
+      class="container"
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <h1>HeyGen Chat Demo</h1>
+
+      <!-- Video Section -->
+      <article style="width: fit-content">
+        <video id="avatarVideo" autoplay playsinline></video>
+      </article>
+
+      <!-- Controls Section -->
+      <section>
+        <section role="group">
+          <button id="startSession">Start Session</button>
+          <button id="endSession" disabled>End Session</button>
+        </section>
+
+        <section role="group">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Type something to talk to the avatar..."
+            aria-label="User input"
+          />
+          <button id="speakButton" role="button">Speak</button>
+        </section>
+        <!-- Add this after your existing buttons -->
+        <section role="group">
+            <button id="recordButton">Start Recording</button>
+        </section>
+
+        <div>
+            <p id="recordingStatus"></p>
+        </div>
+        <!-- Add mode switching buttons -->
+        <div class="chat-modes" role="group">
+          <button id="textModeBtn" class="active">Text Mode</button>
+          <button id="voiceModeBtn" disabled>Voice Mode</button>
+        </div>
+        <section id="voiceModeControls" role="group" style="display: none">
+          <div id="voiceStatus"></div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
